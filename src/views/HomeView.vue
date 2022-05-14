@@ -1,22 +1,22 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="1" class="fixed"/>
-    <div class="flex ml-80 px-4">
+    <sidebar-component active="1" class="fixed d-none-mob"/>
+    <div class="flex ml-none-mob ml-80 px-4">
       <div class="main-container py-5 container flex-col">
         <page-title title="Dashboard"></page-title>
-        <div class="mb-5 flex justify-between">
-          <div class="mr-5 w-1/3">
+        <div class="mb-5 flex main-dashboard-container justify-between ">
+          <div class="mr-5 w-1/3 dashboard-container">
             <main-bar-dashboard :with-dashboard="true" type="activePrice" title="4 700 000 ₸" subtitle="Общая сумма активов" />
           </div>
-          <div class="w-1/3 mr-5">
+          <div class="w-1/3 mr-5 dashboard-container">
             <main-bar-dashboard :with-dashboard="true" type="income" title="17.4 %" subtitle="Средняя доходность по портфелю" />
           </div>
-          <div class="w-1/3">
+          <div class="w-1/3 dashboard-container">
             <main-bar-dashboard :with-dashboard="false" type="totalPrice" title="4 700 000 ₸" subtitle="Общая сумма за весь период" />
           </div>
         </div>
         <div class="flex items-start flex-col xl:flex-row">
-          <div class="p-4 w-5/12 rounded bg-white mb-5 mr-5">
+          <div class="p-4 w-5/12 donuts-dashboard rounded bg-white mb-5 mr-5">
             <table-title title="Конвертация"></table-title>
             <Doughnut
               :chart-options="chartOptions"
@@ -27,7 +27,7 @@
             />
           </div>
           <div class="p-4 w-full rounded bg-white mb-5">
-            <div class="flex items-start">
+            <div class="statistic-dash-container flex items-start">
               <div class="text-left static-container mr-4">
                 <div class="mb-4">
                   <h1>434 545 ₸</h1>
@@ -43,7 +43,7 @@
                   </div>
                 </div>
               </div>
-              <div>
+              <div class="sum-in-month-table-container">
                 <div class="flex flex-col sum-in-month-table">
                   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full sm:px-6 lg:px-8">
@@ -164,6 +164,74 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media only screen and (min-width: 300px) and (max-width: 599px) {
+    .d-none-mob {
+      display: none;
+    }
+    .ml-none-mob {
+      margin-left: 0!important;
+    }
+    .main-dashboard-container {
+      flex-direction: column!important;
+      .dashboard-container {
+        width: 100%!important;
+        margin-top: 1rem!important;;
+        &:first-child {
+          margin-top: 0!important;
+        }
+      }
+    }
+    .donuts-dashboard {
+      width: 100%!important;
+    }
+    .statistic-dash-container {
+      flex-direction: column!important;;
+      .static-container {
+        display: flex!important;;
+        h4 {
+          font-size: 1rem!important;;
+        }
+        .statistic-indicator {
+          max-width: 60px!important;;
+          max-height: 60px!important;;
+        }
+      }
+      .sum-in-month-table-container {
+        width: 100%!important;
+      }
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width:1000px) {
+    .main-dashboard-container {
+      flex-direction: column;
+      .dashboard-container {
+        width: 100%!important;
+        margin-top: 1rem;
+        &:first-child {
+          margin-top: 0!important;
+        }
+      }
+    }
+    .donuts-dashboard {
+      width: 100%!important;
+    }
+    .statistic-dash-container {
+      flex-direction: column;
+      .static-container {
+        display: flex;
+        h4 {
+          font-size: 1rem;
+        }
+        .statistic-indicator {
+          max-width: 60px;
+          max-height: 60px;
+        }
+      }
+      .sum-in-month-table-container {
+        width: 100%!important;
+      }
+    }
+  }
   .home-container {}
   .main-container {}
   .sum-in-month-table {
