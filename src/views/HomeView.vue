@@ -29,7 +29,7 @@
           <div class="p-4 w-full rounded bg-white mb-5">
             <div class="statistic-dash-container flex items-start">
               <div class="text-left static-container mr-4">
-                <div class="mb-4">
+                <div class="mb-4 static-title">
                   <h1>434 545 ₸</h1>
                   <p class="sub-title-statistic">общий доход за весь период</p>
                 </div>
@@ -175,7 +175,7 @@ export default {
       flex-direction: column!important;
       .dashboard-container {
         width: 100%!important;
-        margin-top: 1rem!important;;
+        margin-top: 1rem!important;
         &:first-child {
           margin-top: 0!important;
         }
@@ -185,15 +185,18 @@ export default {
       width: 100%!important;
     }
     .statistic-dash-container {
-      flex-direction: column!important;;
+      flex-direction: column!important;
       .static-container {
-        display: flex!important;;
+        display: flex!important;
+        .static-title {
+          margin-right: 1rem!important;
+        }
         h4 {
-          font-size: 1rem!important;;
+          font-size: 1rem!important;
         }
         .statistic-indicator {
-          max-width: 60px!important;;
-          max-height: 60px!important;;
+          max-width: 60px!important;
+          max-height: 60px!important;
         }
       }
       .sum-in-month-table-container {
@@ -219,6 +222,9 @@ export default {
       flex-direction: column;
       .static-container {
         display: flex;
+        .static-title {
+          margin-right: 1rem!important;
+        }
         h4 {
           font-size: 1rem;
         }
