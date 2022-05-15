@@ -25,6 +25,34 @@
             status="A"
           />
         </div>
+        <div class="mb-5 flex mob-direction-column">
+          <div class="bg-white rounded mr-4 p-4 text-left sum-around-container">
+            <h1>434 545 ₸</h1>
+            <p>общий оборот за 12 мес</p>
+            <div class="flex items-start mt-4">
+              <div class="around-indicator-container mr-3">
+                <img class="p-3" src="../assets/icon/up-arrow.png" alt="">
+              </div>
+              <div class="indicator-text-container">
+                <h1>+ 30 000 ₸</h1>
+                <p>в этом месяце</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded mr-4 p-4 text-left sum-around-container">
+            <h1>434 545 ₸</h1>
+            <p>общий оборот за 12 мес</p>
+            <div class="flex items-start mt-4">
+              <div class="around-indicator-container mr-3">
+                <img class="p-3" src="../assets/icon/up-arrow.png" alt="">
+              </div>
+              <div class="indicator-text-container">
+                <h1>+ 30 000 ₸</h1>
+                <p>в этом месяце</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="rounded bg-white p-4 mb-5">
           <div class="info-desc text-left">
             <h4>
@@ -158,6 +186,16 @@ export default {
 
 <style lang="scss" scoped>
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  .sum-around-container {
+    width: 100%!important;
+    margin-right: 0!important;
+    &:last-child {
+      margin-top: 1rem;
+    }
+  }
+  .mob-direction-column {
+    flex-direction: column;
+  }
   .d-none-mob {
     display: none;
   }
@@ -178,6 +216,16 @@ export default {
   }
 }
 @media only screen and (min-width: 600px) and (max-width:1000px) {
+  .sum-around-container {
+    width: 100%!important;
+    margin-right: 0!important;
+    &:last-child {
+      margin-top: 1rem;
+    }
+  }
+  .mob-direction-column {
+    flex-direction: column;
+  }
   .data-registration-container {
     flex-direction: column;
     .date-text-container {
@@ -189,6 +237,41 @@ export default {
         margin-right: .5rem;
       }
     }
+  }
+}
+.indicator-text-container {
+  h1 {
+    font-weight: 600!important;
+    font-size: 18px!important;
+    line-height: 24px!important;
+  }
+  p {
+    font-weight: 500!important;
+    font-size: 14px!important;
+    line-height: 18px!important;
+  }
+}
+.around-indicator-container {
+  background-color: #00A47D;
+  box-shadow: 0 1px 4px rgba(0, 164, 125, 0.25), 0 3px 12px 2px rgba(0, 164, 125, 0.35);
+  border-radius: 6px;
+}
+.sum-around-container {
+  h1 {
+    font-family: 'Gilroy',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 46px;
+    color: #1A3154;
+  }
+  p {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C98A9;
   }
 }
 .document-container {
