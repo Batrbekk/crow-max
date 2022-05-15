@@ -26,7 +26,7 @@
           />
         </div>
         <div class="mb-5 flex mob-direction-column">
-          <div class="bg-white rounded mr-4 p-4 text-left sum-around-container">
+          <div class="w-3/12 bg-white rounded mr-4 p-4 text-left sum-around-container">
             <h1>434 545 ₸</h1>
             <p>общий оборот за 12 мес</p>
             <div class="flex items-start mt-4">
@@ -39,7 +39,8 @@
               </div>
             </div>
           </div>
-          <div class="bg-white rounded mr-4 p-4 text-left sum-around-container">
+          <card-bar class="mr-4 w-full card-bar-container" />
+          <div class="w-3/12 bg-white rounded mr-4 p-4 text-left sum-around-container">
             <h1>434 545 ₸</h1>
             <p>общий оборот за 12 мес</p>
             <div class="flex items-start mt-4">
@@ -170,9 +171,11 @@
 import SidebarComponent from '@/components/SidebarComponent'
 import PageTitle from '@/components/PageTitle'
 import CardInfoDesc from '@/components/CardInfoDesc'
+import CardBar from '@/components/CardBar'
 export default {
   name: 'CardInfoView',
   components: {
+    CardBar,
     SidebarComponent,
     PageTitle,
     CardInfoDesc
@@ -186,6 +189,9 @@ export default {
 
 <style lang="scss" scoped>
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  .card-bar-container {
+    margin-top: 1rem;
+  }
   .sum-around-container {
     width: 100%!important;
     margin-right: 0!important;
@@ -216,6 +222,9 @@ export default {
   }
 }
 @media only screen and (min-width: 600px) and (max-width:1000px) {
+  .card-bar-container {
+    margin-top: 1rem;
+  }
   .sum-around-container {
     width: 100%!important;
     margin-right: 0!important;
