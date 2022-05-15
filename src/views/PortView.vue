@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="3" class="fixed"/>
-    <div class="flex ml-80 px-4">
+    <sidebar-component active="3" class="fixed d-none-mob"/>
+    <div class="flex ml-80 px-4 ml-none-mob">
       <div class="main-container py-5 container flex-col">
         <page-title title="Заявки"></page-title>
         <div class="filter-container flex items-center mb-5">
@@ -55,6 +55,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .d-none-mob {
+    display: none;
+  }
+  .ml-none-mob {
+    margin-left: 0!important;
+  }
+  .form-select {
+    width: 100%!important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width:1000px) {
+  .form-select {
+    width: 100%!important;
+  }
+}
 .home-container {
   background-color: #E5E5E5;
 }

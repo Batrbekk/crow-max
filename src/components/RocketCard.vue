@@ -2,7 +2,7 @@
   <div class="rocket-card-container w-full bg-white">
     <div class="p-2.5 flex flex-col">
       <div class="flex items-start">
-        <div class="w-9/12 mr-auto">
+        <div class="w-9/12 mr-auto card-img-container">
           <img :src="require(`../assets/rocket/${cardImgSrc}.png`)" class="mb-1 w-full" alt="">
           <card-progress :bar-procent=cardProgress></card-progress>
         </div>
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="flex items-start w-full">
+      <div class="flex items-start w-full card-desc-container">
         <div class="w-9/12 mr-auto">
           <div class="flex justify-between items-center mt-2">
             <div class="card-title-container">
@@ -69,6 +69,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .card-button-container {
+    margin-right: 0!important;
+  }
+  .card-desc-container {
+    margin-top: .5rem;
+  }
+  .card-title-container {
+    width: 70%!important;
+  }
+  .card-price-container {
+    h1 {
+      font-size: 1rem!important;
+      line-height: 1rem!important;
+    }
+  }
+  .card-img-container {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width:1000px) {
+  .card-img-container {
+    margin-right: 1rem;
+  }
+}
 .rocket-card-container {
   border-radius: .5rem;
   .card-title-container {

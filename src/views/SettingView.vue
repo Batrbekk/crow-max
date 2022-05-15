@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="4" class="fixed"/>
-    <div class="flex ml-80 px-4">
+    <sidebar-component active="4" class="fixed d-none-mob"/>
+    <div class="flex ml-80 px-4 ml-none-mob">
       <div class="main-container py-5 container flex-col">
         <page-title title="Настройки профиля"></page-title>
         <div class="p-4 rounded bg-white mb-5">
@@ -180,6 +180,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .d-none-mob {
+    display: none;
+  }
+  .ml-none-mob {
+    margin-left: 0!important;
+  }
+}
 .home-container {
   background-color: #E5E5E5;
   .form-container {
