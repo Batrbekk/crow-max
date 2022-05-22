@@ -26,23 +26,22 @@
               {{ cardSum }} млн ₸
             </h1>
           </div>
-          <div class="card-sum-container mt-1 text-left">
-            <p class="mb-1">Сумма  доступная для инвестирования</p>
-            <h1>
-              {{ cardInvestSum }} ₸
-            </h1>
-          </div>
-          <div class="form-container w-full mt-4">
-            <input
-              maxlength="12"
-              type="number"
-              class="form-control block w-4/12 p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
-                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
-                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none rounded-lg"
-              id="sumInvest"
-              placeholder="Сумма инвестирования"
-            />
-            <button @click="$router.push('invest-card')" class="button-link w-4/12 mt-2 flex justify-center py-4 px-16 border border-transparent">Вступить</button>
+          <div class="one-row-container flex items-center mt-1">
+            <div class="card-sum-container mr-12 text-left">
+              <p class="mb-1">Сумма  доступная для инвестирования</p>
+              <h1>
+                {{ cardInvestSum }} ₸
+              </h1>
+            </div>
+            <div class="card-sum-container mr-12 text-left">
+              <p class="mb-1">Сумма  доступная для инвестирования</p>
+              <h1>
+                {{ cardInvestPrecent }}%
+              </h1>
+            </div>
+            <div class="card-button-container text-left">
+              <button @click="$router.push('card-info')" class="px-4 py-2">Выйти из проекта</button>
+            </div>
           </div>
         </div>
         <div class="ml-2 w-2/12">
@@ -81,7 +80,7 @@
 import CardProgress from '@/components/CardProgress'
 
 export default {
-  name: 'CardInfoDesc',
+  name: 'CardInvestDesc',
   components: { CardProgress },
   props: {
     cardProgress: Number,
@@ -94,7 +93,8 @@ export default {
     percentage: String,
     date: String,
     application: Number,
-    status: String
+    status: String,
+    cardInvestPrecent: Number
   },
   data () {
     return {
@@ -134,11 +134,17 @@ export default {
       margin-left: 0!important;
       .card-text-container {
         flex-direction: column-reverse;
-        .form-container {
-          input, button {
-            width: 100%!important;
-          }
-        }
+      }
+    }
+    .one-row-container {
+      flex-direction: column;
+      align-items: start!important;
+      .card-sum-container {
+        margin-top: 2px;
+        margin-right: 0!important;
+      }
+      .card-button-container {
+        margin-top: 16px;
       }
     }
   }
@@ -162,11 +168,17 @@ export default {
       margin-left: 0!important;
       .card-text-container {
         flex-direction: column-reverse;
-        .form-container {
-          input, button {
-            width: 100%!important;
-          }
-        }
+      }
+    }
+    .one-row-container {
+      flex-direction: column;
+      align-items: start!important;
+      .card-sum-container {
+        margin-top: 2px;
+        margin-right: 0!important;
+      }
+      .card-button-container {
+        margin-top: 16px;
       }
     }
   }
@@ -231,14 +243,17 @@ export default {
     color: #1A3154;
   }
 }
-.button-link {
-  background-color: #00A47D;
-  border-radius: .5rem;
-  font-family: 'Inter',sans-serif;
+.card-button-container {
+  button {
+    background-color: transparent;
+    border-radius: .5rem;
+    font-family: 'Inter',sans-serif;
     font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    color: #164368;
+    border: 1px solid #164368;
+  }
 }
 .card-info-taq {
   span {

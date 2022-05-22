@@ -7,6 +7,7 @@ import SettingView from '@/views/SettingView'
 import CardView from '@/views/CardView'
 import RegistrationView from '@/views/RegistrationView'
 import CardInfoView from '@/views/CardInfoView'
+import InvestCardView from '@/views/InvestCardView'
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/card-info',
     name: 'card-info',
     component: CardInfoView
+  },
+  {
+    path: '/invest-card',
+    name: 'invest-card',
+    component: InvestCardView
   }
 ]
 
