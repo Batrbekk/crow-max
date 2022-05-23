@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="1" class="fixed d-none-mob"/>
+    <sidebar-moderator-component active="1" class="fixed d-none-mob"/>
     <div class="flex ml-none-mob ml-80 px-4">
       <div class="main-container py-5 container flex-col">
         <page-title title="Dashboard"></page-title>
@@ -17,7 +17,7 @@
         </div>
         <div class="flex items-start flex-col xl:flex-row">
           <div class="p-4 w-5/12 donuts-dashboard rounded bg-white mb-5 mr-5">
-            <table-title title="Конвертация"></table-title>
+            <table-title title="Какойто график"></table-title>
             <Doughnut
               :chart-options="chartOptions"
               :chart-data="chardData"
@@ -26,79 +26,13 @@
               :css-classes="cssClasses"
             />
           </div>
-          <div class="p-4 w-full rounded bg-white mb-5">
-            <div class="statistic-dash-container flex items-start">
-              <div class="text-left static-container mr-4">
-                <div class="mb-4 static-title">
-                  <h1>434 545 ₸</h1>
-                  <p class="sub-title-statistic">общий доход за весь период</p>
-                </div>
-                <div class="flex">
-                  <div class="statistic-indicator mr-3">
-                    <img class="p-3" src="../assets/icon/up-arrow.png" alt="">
-                  </div>
-                  <div>
-                    <h4>+ 30 000 ₸</h4>
-                    <p class="sub-price">в этом месяце</p>
-                  </div>
-                </div>
-              </div>
-              <div class="sum-in-month-table-container">
-                <div class="flex flex-col sum-in-month-table">
-                  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block min-w-full sm:px-6 lg:px-8">
-                      <div class="overflow-hidden">
-                        <table class="min-w-full border text-center">
-                          <tbody>
-                          <tr class="border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
-                              25.02.2022
-                            </td>
-                            <td class="plus-color price-td text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                              + 3 000 ₸
-                            </td>
-                          </tr>
-                          <tr class="bg-white border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
-                              25.02.2022
-                            </td>
-                            <td class="divide-color price-td text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                              - 4 000 ₸
-                            </td>
-                          </tr>
-                          <tr class="bg-white border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
-                              25.02.2022
-                            </td>
-                            <td class="plus-color price-td text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center border-r">
-                              + 3 000 ₸
-                            </td>
-                          </tr>
-                          <tr class="bg-white border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
-                              25.02.2022
-                            </td>
-                            <td class="plus-color price-td text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center border-r">
-                              + 3 000 ₸
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="p-4 rounded bg-white mb-5">
           <table-title title="Ваши проекты"></table-title>
-          <project-table :show-in-month=false></project-table>
+          <project-moderator-table />
         </div>
-        <div class="p-4 rounded bg-white mb-5">
-          <table-title title="График возварата по проектам"></table-title>
-          <project-back-table :show-in-month=false></project-back-table>
+        <div class="mb-5">
+          <notification-component />
         </div>
       </div>
     </div>
@@ -106,27 +40,27 @@
 </template>
 
 <script>
-import SidebarComponent from '@/components/SidebarComponent'
 import PageTitle from '@/components/PageTitle'
 import TableTitle from '@/components/TableTitle'
-import ProjectTable from '@/components/ProjectTable'
-import ProjectBackTable from '@/components/ProjectBackTable'
 import MainBarDashboard from '@/components/MainBarDashboard'
 import { Doughnut } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, ArcElement } from 'chart.js'
+import SidebarModeratorComponent from '@/components/SidebarModeratorComponent'
+import NotificationComponent from '@/components/NotificationComponent'
+import ProjectModeratorTable from '@/components/ProjectModeratorTable'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, ArcElement)
 
 export default {
   name: 'HomeModeratorView',
   components: {
-    SidebarComponent,
+    NotificationComponent,
+    SidebarModeratorComponent,
     PageTitle,
     TableTitle,
-    ProjectTable,
-    ProjectBackTable,
     Doughnut,
-    MainBarDashboard
+    MainBarDashboard,
+    ProjectModeratorTable
   },
   props: {
     width: {

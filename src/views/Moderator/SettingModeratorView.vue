@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="4" class="fixed d-none-mob"/>
+    <sidebar-moderator-component active="6" class="fixed d-none-mob"/>
     <div class="flex ml-80 px-4 ml-none-mob">
       <div class="main-container py-5 container flex-col">
         <page-title title="Настройки профиля"></page-title>
@@ -115,43 +115,13 @@
             </button>
           </div>
         </div>
-        <div class="p-4 rounded bg-white mb-5">
-          <component-title title="Запрос на изменение статуса"></component-title>
-          <div class="py-4">
-            <div class="form-container w-full mb-4">
-              <p class="text-left">
-                Квалифицированный инвестор — это особый статус, который подтверждает опытность участника рынка и дает
-                ему доступ к большему количеству инвестиционных инструментов, которые недоступны для непрофессиональных
-                игроков. Статус квалифицированного инвестора может получить физическое или юридическое лицо, которое
-                соответствует определенным <span>условиям</span>.
-              </p>
-            </div>
-            <div class="form-container w-full ">
-              <label for="document" class="flex items-start form-label inline-block mb-1 text-gray-700">
-                Подтверждающий документ
-              </label>
-              <input
-                type="file"
-                class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
-                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
-                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
-                id="document"
-              />
-            </div>
-          </div>
-          <div>
-            <button type="submit" class="group relative mr-2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Отправить
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SidebarComponent from '@/components/SidebarComponent'
+import SidebarModeratorComponent from '@/components/SidebarModeratorComponent'
 import PageTitle from '@/components/PageTitle'
 import ComponentTitle from '@/components/ComponentTitle'
 import intlTelInput from 'intl-tel-input'
@@ -160,7 +130,7 @@ import 'intl-tel-input/build/js/intlTelInput.js'
 export default {
   name: 'SettingModeratorView',
   components: {
-    SidebarComponent,
+    SidebarModeratorComponent,
     PageTitle,
     ComponentTitle
   },

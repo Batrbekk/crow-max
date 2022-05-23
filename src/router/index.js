@@ -4,10 +4,16 @@ import LoginView from '../views/LoginView.vue'
 import RocketView from '@/views/RocketView'
 import PortView from '@/views/PortView'
 import SettingView from '@/views/SettingView'
-import CardView from '@/views/CardView'
 import RegistrationView from '@/views/RegistrationView'
 import CardInfoView from '@/views/CardInfoView'
 import InvestCardView from '@/views/InvestCardView'
+import HomeModeratorView from '@/views/Moderator/HomeModeratorView'
+import RocketModeratorView from '@/views/Moderator/RocketModeratorView'
+import IntegrationModeratorView from '@/views/Moderator/IntegrationModeratorView'
+import UserModeratorView from '@/views/Moderator/UserModeratorView'
+import EditUserModerator from '@/views/Moderator/EditUserModerator'
+import SettingModeratorView from '@/views/Moderator/SettingModeratorView'
+import EditRocketModerator from '@/views/Moderator/EditRocketModerator'
 
 const routes = [
   {
@@ -41,11 +47,6 @@ const routes = [
     component: SettingView
   },
   {
-    path: '/card',
-    name: 'card',
-    component: CardView
-  },
-  {
     path: '/card-info',
     name: 'card-info',
     component: CardInfoView
@@ -54,6 +55,41 @@ const routes = [
     path: '/invest-card',
     name: 'invest-card',
     component: InvestCardView
+  },
+  {
+    path: '/moderator-home',
+    name: 'moderator-home',
+    component: HomeModeratorView
+  },
+  {
+    path: '/moderator-rocket',
+    name: 'moderator-rocket',
+    component: RocketModeratorView
+  },
+  {
+    path: '/moderator-integration',
+    name: 'moderator-integration',
+    component: IntegrationModeratorView
+  },
+  {
+    path: '/moderator-users',
+    name: 'moderator-users',
+    component: UserModeratorView
+  },
+  {
+    path: '/moderator-edit-user',
+    name: 'moderator-edit-user',
+    component: EditUserModerator
+  },
+  {
+    path: '/moderator-setting',
+    name: 'moderator-setting',
+    component: SettingModeratorView
+  },
+  {
+    path: '/moderator-edit-rocket',
+    name: 'moderator-edit-rocket',
+    component: EditRocketModerator
   }
 ]
 
