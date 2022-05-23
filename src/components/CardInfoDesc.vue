@@ -32,7 +32,7 @@
               {{ cardInvestSum }} ₸
             </h1>
           </div>
-          <div class="form-container w-full mt-4">
+          <div v-if="this.withButtonDate===false" class="form-container w-full mt-4">
             <input
               maxlength="12"
               type="number"
@@ -83,6 +83,16 @@ import CardProgress from '@/components/CardProgress'
 export default {
   name: 'CardInfoDesc',
   components: { CardProgress },
+  data () {
+    return {
+      image1: 'image',
+      image2: 'like',
+      image3: 'date',
+      image4: 'add',
+      currentImage: 'image',
+      withButtonDate: this.withButton
+    }
+  },
   props: {
     cardProgress: Number,
     cardTitle: String,
@@ -94,16 +104,8 @@ export default {
     percentage: String,
     date: String,
     application: Number,
-    status: String
-  },
-  data () {
-    return {
-      image1: 'image',
-      image2: 'like',
-      image3: 'date',
-      image4: 'add',
-      currentImage: 'image'
-    }
+    status: String,
+    withButton: Boolean
   },
   methods: {
     changeImg (event) {

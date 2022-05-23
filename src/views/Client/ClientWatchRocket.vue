@@ -1,10 +1,10 @@
 <template>
   <div class="home-container">
-    <sidebar-component active="2" class="fixed d-none-mob"/>
+    <sidebar-client-component active="2" class="fixed d-none-mob"/>
     <div class="flex ml-80 px-4 ml-none-mob">
       <div class="main-container py-5 container flex-col">
         <div class="flex items-center">
-          <router-link to="/rocket"><img class="py-4 mb-5 mr-4" src="../assets/icon/left.png" alt=""></router-link>
+          <router-link to="/rocket"><img class="py-4 mb-5 mr-4" src="../../assets/icon/left.png" alt=""></router-link>
           <page-title title="New Level"></page-title>
         </div>
         <div class="mb-5">
@@ -23,7 +23,7 @@
             date="12"
             :application=56
             status="A"
-            :with-button="false"
+            :with-button="true"
           />
         </div>
         <div class="mb-5 flex mob-direction-column">
@@ -32,7 +32,7 @@
             <p>общий оборот за 12 мес</p>
             <div class="flex items-start mt-4">
               <div class="around-indicator-container mr-3">
-                <img class="p-3" src="../assets/icon/up-arrow.png" alt="">
+                <img class="p-3" src="../../assets/icon/up-arrow.png" alt="">
               </div>
               <div class="indicator-text-container">
                 <h1>+ 30 000 ₸</h1>
@@ -46,7 +46,7 @@
             <p>общий оборот за 12 мес</p>
             <div class="flex items-start mt-4">
               <div class="around-indicator-container mr-3">
-                <img class="p-3" src="../assets/icon/up-arrow.png" alt="">
+                <img class="p-3" src="../../assets/icon/up-arrow.png" alt="">
               </div>
               <div class="indicator-text-container">
                 <h1>+ 30 000 ₸</h1>
@@ -140,27 +140,65 @@
             <p>Недобросовестный участник Государственных закупок</p>
           </div>
         </div>
-        <div class="rounded bg-white p-4 text-left">
+        <div class="rounded bg-white mb-5 p-4 text-left">
           <h1 class="date-title pb-1.5 mb-5">Вложенные документы</h1>
           <div class="flex document-container items-center mb-4">
-            <img class="mr-2" src="../assets/cardInfoDesc/doc.png" alt="">
+            <img class="mr-2" src="../../assets/cardInfoDesc/doc.png" alt="">
             <p>Договор o купли продаже</p>
           </div>
           <div class="flex document-container items-center mb-4">
-            <img class="mr-2" src="../assets/cardInfoDesc/doc.png" alt="">
+            <img class="mr-2" src="../../assets/cardInfoDesc/doc.png" alt="">
             <p>Сертификаты безопасности</p>
           </div>
           <div class="flex document-container items-center mb-4">
-            <img class="mr-2" src="../assets/cardInfoDesc/doc.png" alt="">
+            <img class="mr-2" src="../../assets/cardInfoDesc/doc.png" alt="">
             <p>Разрешение на использование инвестиций</p>
           </div>
           <div class="flex document-container items-center mb-4">
-            <img class="mr-2" src="../assets/cardInfoDesc/doc.png" alt="">
+            <img class="mr-2" src="../../assets/cardInfoDesc/doc.png" alt="">
             <p>Разрешение на работу в Казахстане</p>
           </div>
           <div class="flex document-container items-center">
-            <img class="mr-2" src="../assets/cardInfoDesc/doc.png" alt="">
+            <img class="mr-2" src="../../assets/cardInfoDesc/doc.png" alt="">
             <p>Отчет за последний квартал</p>
+          </div>
+        </div>
+        <div class="rounded bg-white mb-5 p-4 text-left">
+          <component-title class="mb-4" title="Инвесторы" />
+          <document-table />
+        </div>
+        <div class="p-4 rounded bg-white mb-5">
+          <component-title title="Безопастность"></component-title>
+          <div class="flex items-center py-4">
+            <div class="form-container w-full mr-4">
+              <label for="examplePassword0" class="flex items-start form-label inline-block mb-1 text-gray-700">
+                Пароль
+              </label>
+              <input
+                type="password"
+                class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                id="examplePassword0"
+                placeholder="Пароль"/>
+            </div>
+            <div class="form-container w-full ">
+              <label for="examplePassword1" class="flex items-start form-label inline-block mb-1 text-gray-700">
+                Повторите пароль
+              </label>
+              <input
+                type="password"
+                class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                id="examplePassword1"
+                placeholder="Повторите пароль"/>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="group change-btn relative mr-2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Изменить
+            </button>
           </div>
         </div>
       </div>
@@ -169,17 +207,21 @@
 </template>
 
 <script>
-import SidebarComponent from '@/components/SidebarComponent'
+import SidebarClientComponent from '@/components/SidebarClientComponent'
 import PageTitle from '@/components/PageTitle'
 import CardInfoDesc from '@/components/CardInfoDesc'
 import CardBar from '@/components/CardBar'
+import ComponentTitle from '@/components/ComponentTitle'
+import DocumentTable from '@/components/DocumentTable'
 export default {
-  name: 'CardInfoView',
+  name: 'ClientWatchRocket',
   components: {
+    ComponentTitle,
     CardBar,
-    SidebarComponent,
+    SidebarClientComponent,
     PageTitle,
-    CardInfoDesc
+    CardInfoDesc,
+    DocumentTable
   },
   data () {
     return {}
@@ -338,5 +380,14 @@ export default {
     line-height: 18px;
     color: #164368;
   }
+}
+.change-btn {
+  background-color: #1A3154;
+  border-radius: .5rem;
+  font-family: 'Inter',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: .75rem;
+  line-height: 1rem;
 }
 </style>
