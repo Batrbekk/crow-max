@@ -2,7 +2,7 @@
   <aside class="w-80 h-screen" aria-label="Sidebar">
     <div class="overflow-y-auto relative h-full py-4 bg-white">
       <a href="https://flowbite.com" class="flex items-center pl-2.5 mb-14">
-        <img src="../assets/logo.svg" class="mr-3 sm:h-12 w-full" alt="Flowbite Logo" />
+        <img src="../assets/logo.svg" class="sm:h-12 w-full" alt="Flowbite Logo" />
       </a>
       <ul class="space-y-2 sidebar-container flex-col">
         <div class="px-3">
@@ -36,7 +36,7 @@
           <li>
             <router-link to="/port" :class="{'active': active === '3'}" class="flex relative items-center my-2 px-4 py-3.5 text-base font-normal text-gray-900 rounded-lg text-gray-500">
               <img src="../assets/icon/port.png" alt="">
-              <span class="flex-1 whitespace-nowrap">Портфель</span>
+              <span class="flex-1 whitespace-nowrap">Мои заявки</span>
               <span class="absolute right-0 mr-4 tag-span inline-flex justify-center items-center px-2.5 py-1.5 rounded-full">123</span>
             </router-link>
           </li>

@@ -3,7 +3,7 @@
     <sidebar-component active="3" class="fixed d-none-mob"/>
     <div class="flex ml-80 px-4 ml-none-mob">
       <div class="main-container py-5 container flex-col">
-        <page-title title="Заявки"></page-title>
+        <page-title title="Мои заявки"></page-title>
         <div class="filter-container flex items-center mb-5">
           <p class="mr-2">Фильтр:</p>
           <select class="form-select appearance-none w-2/12 block px-4 mr-3 py-2 text-base font-normal bg-transparent
@@ -25,9 +25,13 @@
             <option value="3">Еще какой-то вариант</option>
           </select>
         </div>
-        <div class="p-4 rounded bg-white mb-5">
-          <table-title title="Ваши проекты"></table-title>
-          <project-table :show-in-month=false ></project-table>
+        <div class="rounded mb-5">
+          <div class="flex flex-wrap gap-4">
+            <img src="../assets/port/card.svg" alt="">
+            <img src="../assets/port/card.svg" alt="">
+            <img src="../assets/port/card.svg" alt="">
+            <img src="../assets/port/card.svg" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -37,15 +41,11 @@
 <script>
 import SidebarComponent from '@/components/SidebarComponent'
 import PageTitle from '@/components/PageTitle'
-import TableTitle from '@/components/TableTitle'
-import ProjectTable from '@/components/ProjectTable'
 export default {
   name: 'PortView',
   components: {
     SidebarComponent,
-    PageTitle,
-    TableTitle,
-    ProjectTable
+    PageTitle
   },
   data () {
     return {}

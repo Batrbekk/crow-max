@@ -116,33 +116,172 @@
           </div>
         </div>
         <div class="p-4 rounded bg-white mb-5">
-          <component-title title="Запрос на изменение статуса"></component-title>
-          <div class="py-4">
-            <div class="form-container w-full mb-4">
-              <p class="text-left">
-                Квалифицированный инвестор — это особый статус, который подтверждает опытность участника рынка и дает
-                ему доступ к большему количеству инвестиционных инструментов, которые недоступны для непрофессиональных
-                игроков. Статус квалифицированного инвестора может получить физическое или юридическое лицо, которое
-                соответствует определенным <span>условиям</span>.
-              </p>
-            </div>
-            <div class="form-container w-full ">
-              <label for="document" class="flex items-start form-label inline-block mb-1 text-gray-700">
-                Подтверждающий документ
+          <component-title title="Безопастность"></component-title>
+          <div class="flex items-center py-4">
+            <div class="form-container w-full mr-4">
+              <label for="examplePassword0" class="flex items-start form-label inline-block mb-1 text-gray-700">
+                Пароль
               </label>
               <input
-                type="file"
+                type="password"
                 class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
                          border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
                          focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
-                id="document"
-              />
+                id="examplePassword0"
+                placeholder="Пароль"/>
+            </div>
+            <div class="form-container w-full ">
+              <label for="examplePassword1" class="flex items-start form-label inline-block mb-1 text-gray-700">
+                Повторите пароль
+              </label>
+              <input
+                type="password"
+                class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                id="examplePassword1"
+                placeholder="Повторите пароль"/>
             </div>
           </div>
           <div>
             <button type="submit" class="group relative mr-2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Отправить
+              Изменить
             </button>
+          </div>
+        </div>
+        <div class="p-4 rounded bg-white mb-5">
+          <div>
+            <component-title title="Компания"></component-title>
+            <div>
+              <div class="flex flex-col lg:flex-row items-center pt-4">
+                <div class="form-container w-full mr-0 lg:mr-4">
+                  <label for="surname" class="flex justify-between mb-1">Название компании</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="surname"
+                    placeholder="Название компании"/>
+                </div>
+                <div class="form-container w-full mt-4 lg:mt-0 mr-0 lg:mr-4">
+                  <label for="name" class="flex justify-between mb-1">БИН</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="name"
+                    placeholder="БИН"/>
+                </div>
+                <div class="form-container w-full mt-4 lg:mt-0">
+                  <label for="wallet-num" class="flex justify-between mb-1">Номер счета</label>
+                  <input
+                    maxlength="20"
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="wallet-num"
+                    placeholder="Номер счета"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <component-title title="Руководитель"></component-title>
+            <div>
+              <div class="flex flex-col lg:flex-row items-center pt-4">
+                <div class="form-container w-full mr-0 lg:mr-4">
+                  <label for="surname" class="flex justify-between mb-1">Имя</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="surname"
+                    placeholder="Имя"/>
+                </div>
+                <div class="form-container w-full mt-4 lg:mt-0 mr-0 lg:mr-4">
+                  <label for="name" class="flex justify-between mb-1">Фамилия</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="name"
+                    placeholder="Фамилия"/>
+                </div>
+                <div class="form-container w-full mt-4 lg:mt-0">
+                  <label for="surname" class="flex justify-between mb-1">Отчество</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="surname"
+                    placeholder="Отчество"/>
+                </div>
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="form-container w-full lg:w-1/3 mr-4">
+                  <label for="iin" class="flex items-start form-label inline-block mb-1 text-gray-700">
+                    ИИН
+                  </label>
+                  <input
+                    maxlength="12"
+                    type="tel"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="iin"
+                  />
+                </div>
+                <div class="form-container w-full lg:w-1/3">
+                  <label class="mb-1 flex items-start">Телефон *</label>
+                  <input type="tel" class="form-control p-4 w-full block text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                         id="telephone"
+                         placeholder="+7 (---) --- -- --">
+                </div>
+              </div>
+              <div class="mt-4">
+                <button type="submit" class="group relative mr-2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <component-title title="Контактные данные"></component-title>
+            <div>
+              <div class="flex flex-col items-start pt-4">
+                <div class="form-container w-full w-full lg:w-1/3">
+                  <label for="surname" class="flex justify-between mb-1">Юридический адрес*</label>
+                  <input
+                    type="text"
+                    class="form-control block w-full p-4 text-base font-normal text-gray-700 bg-white bg-clip-padding
+                           border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                           focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                    id="surname"
+                    placeholder="Юридический адрес"/>
+                </div>
+                <div class="form-container w-full mt-4 w-full lg:w-1/3">
+                  <label class="mb-1 flex items-start">Телефон*</label>
+                  <input type="tel" class="form-control p-4 w-full block text-base font-normal text-gray-700 bg-white bg-clip-padding
+                         border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700
+                         focus:bg-white focus:border-green-600 focus:outline-none focus:shadow-none"
+                         id="telephone"
+                         placeholder="+7 (---) --- -- --">
+                </div>
+                <div>
+                  <button type="submit" class="group mt-4 relative mr-2 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Сохранить
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

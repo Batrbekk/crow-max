@@ -3,7 +3,7 @@
     <sidebar-component active="1" class="fixed d-none-mob"/>
     <div class="flex ml-none-mob ml-80 px-4">
       <div class="main-container py-5 container flex-col">
-        <page-title title="Dashboard"></page-title>
+        <page-title title="Главная"></page-title>
         <div class="mb-5 flex main-dashboard-container justify-between ">
           <div class="mr-5 w-1/3 dashboard-container">
             <main-bar-dashboard :with-dashboard="true" type="activePrice" title="4 700 000 ₸" subtitle="Общая сумма активов" />
@@ -92,13 +92,11 @@
             </div>
           </div>
         </div>
-        <div class="p-4 rounded bg-white mb-5">
-          <table-title title="Ваши проекты"></table-title>
-          <project-table :show-in-month=false></project-table>
+        <div class="rounded bg-white mb-5">
+          <img src="../assets/port/card-main.svg" alt="">
         </div>
         <div class="p-4 rounded bg-white mb-5">
-          <table-title title="График возварата по проектам"></table-title>
-          <project-back-table :show-in-month=false></project-back-table>
+          <img src="../assets/port/card-main2.svg" alt="">
         </div>
       </div>
     </div>
@@ -109,8 +107,6 @@
 import SidebarComponent from '@/components/SidebarComponent'
 import PageTitle from '@/components/PageTitle'
 import TableTitle from '@/components/TableTitle'
-import ProjectTable from '@/components/ProjectTable'
-import ProjectBackTable from '@/components/ProjectBackTable'
 import MainBarDashboard from '@/components/MainBarDashboard'
 import { Doughnut } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, ArcElement } from 'chart.js'
@@ -123,8 +119,6 @@ export default {
     SidebarComponent,
     PageTitle,
     TableTitle,
-    ProjectTable,
-    ProjectBackTable,
     Doughnut,
     MainBarDashboard
   },

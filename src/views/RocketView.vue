@@ -25,96 +25,21 @@
             <option value="3">Еще какой-то вариант</option>
           </select>
         </div>
-        <div class="mb-5 grid lg:grid-cols-2 gap-5 ">
+        <div class="mb-5 flex flex-wrap gap-4 ">
           <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
+            <img src="../assets/port/card-r.svg" alt="">
           </div>
           <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
+            <img src="../assets/port/card-r.svg" alt="">
           </div>
           <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
+            <img src="../assets/port/card-r.svg" alt="">
           </div>
           <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
+            <img src="../assets/port/card-r.svg" alt="">
           </div>
           <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
-          </div>
-          <div class="">
-            <rocket-card
-              card-img-src="card-img"
-              :card-progress=58
-              card-price="20 млн ₸"
-              card-desc="Рекламная и производственная компания, производит какойто очень важный товар. а также
-                         большой рынок наружней рекламы и еще какойто очень важный текст..."
-              card-title="New Level"
-              card-sub-title="Рекламная и производственная компания"
-              procent-year="27%"
-              month="12"
-              :request=56
-              push-link="card-info"
-            ></rocket-card>
+            <img src="../assets/port/card-r.svg" alt="">
           </div>
         </div>
       </div>
@@ -125,13 +50,11 @@
 <script>
 import SidebarComponent from '@/components/SidebarComponent'
 import PageTitle from '@/components/PageTitle'
-import RocketCard from '@/components/RocketCard'
 export default {
   name: 'RocketView',
   components: {
     SidebarComponent,
-    PageTitle,
-    RocketCard
+    PageTitle
   },
   data () {
     return {}

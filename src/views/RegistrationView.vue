@@ -16,14 +16,14 @@
             border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100
             focus:border-transparent active" id="tabs-home-tab" data-bs-toggle="pill"
                data-bs-target="#tabs-home" role="tab" aria-controls="tabs-home"
-               aria-selected="true">Я инвестор</a>
+               aria-selected="true">Я логист</a>
           </li>
           <li class="nav-item w-full" role="presentation">
             <a href="#tabs-profile" class="nav-link block font-medium text-xs leading-tight uppercase border-x-0
                 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100
                 focus:border-transparent" id="tabs-profile-tab" data-bs-toggle="pill"
                data-bs-target="#tabs-profile" role="tab"
-               aria-controls="tabs-profile" aria-selected="false">Я предприниматель</a>
+               aria-controls="tabs-profile" aria-selected="false">Я перевозчик</a>
           </li>
         </ul>
         <div class="tab-content" id="tabs-tabContent">
